@@ -287,7 +287,9 @@ st.markdown("---")
 
 st.markdown(
     """
-### Features Included
+### This application is made for Shrim Kantan Intrastructure Private Limited
+
+### Feature Includes
 
 ✅ Multi-file upload  
 ✅ Drag-and-drop ordering  
