@@ -19,6 +19,15 @@ st.set_page_config(
 
 
 # ========================================
+# RESET FUNCTION
+# ========================================
+
+def reset_app():
+
+    st.session_state.clear()
+
+
+# ========================================
 # CREATE REQUIRED DIRECTORIES
 # ========================================
 
@@ -160,6 +169,22 @@ def merge_pdfs(pdf_list, output_path):
 
 st.title("📄 Modern Multi-Format PDF Merger")
 
+
+# ========================================
+# REFRESH BUTTON
+# ========================================
+
+col1, col2 = st.columns([8, 1])
+
+with col2:
+
+    if st.button("🔄 Refresh"):
+
+        reset_app()
+
+        st.rerun()
+
+
 st.markdown(
     """
 Upload multiple files, rearrange them,
@@ -299,5 +324,6 @@ st.markdown(
 ✅ Acrobat-safe PDFs  
 ✅ Modern UI  
 ✅ Download final PDF  
+✅ Refresh Application Button
 """
 )
