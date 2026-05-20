@@ -181,7 +181,7 @@ st.title("📄 Shrim Kantan-Multi-Format PDF Merger")
 # REFRESH BUTTON
 # ========================================
 
-if st.button("🔄 Reset Application"):
+if st.button("🔄 Refresh -> Go to Home Page"):
 
     reset_app()
 
