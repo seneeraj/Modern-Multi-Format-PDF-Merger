@@ -26,7 +26,14 @@ def reset_app():
 
     st.session_state["uploader_key"] += 1
 
+# ========================================
+# SESSION STATE INITIALIZATION
+# ========================================
 
+if "uploader_key" not in st.session_state:
+
+    st.session_state["uploader_key"] = 0
+    
 # ========================================
 # CREATE REQUIRED DIRECTORIES
 # ========================================
@@ -196,6 +203,7 @@ and merge everything into one PDF.
 uploaded_files = st.file_uploader(
     "Drag and drop files here",
     accept_multiple_files=True,
+    key=st.session_state["uploader_key"],
     type=[
         "pdf",
         "jpg",
