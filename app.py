@@ -24,7 +24,7 @@ st.set_page_config(
 
 def reset_app():
 
-    st.session_state.clear()
+    st.session_state["uploader_key"] += 1
 
 
 # ========================================
