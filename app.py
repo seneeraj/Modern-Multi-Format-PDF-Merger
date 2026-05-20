@@ -167,22 +167,18 @@ def merge_pdfs(pdf_list, output_path):
 # MAIN UI
 # ========================================
 
-st.title("📄 Modern Multi-Format PDF Merger")
+st.title("📄 Shrim Kantan-Multi-Format PDF Merger")
 
 
 # ========================================
 # REFRESH BUTTON
 # ========================================
 
-col1, col2 = st.columns([8, 1])
+if st.button("🔄 Reset Application"):
 
-with col2:
+    reset_app()
 
-    if st.button("🔄 Refresh"):
-
-        reset_app()
-
-        st.rerun()
+    st.rerun()
 
 
 st.markdown(
